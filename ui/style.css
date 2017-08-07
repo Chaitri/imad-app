@@ -1,22 +1,27 @@
+
 body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+background-image : url("https://static.pexels.com/photos/113338/pexels-photo-
+
+113338.jpeg");
+background-size : contain;
 }
 
-.center {
-    text-align: center;
+h1 {
+font-size : 40px;
+color : white;
+text-decoration : underline;
+font-weight : bold;
+text-align : center;
+padding : 20px;
 }
 
-.text-big {
-    font-size: 300%;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.img-medium {
-    height: 200px;
+.box {
+border : 1px solid #8DC16E;
+padding : 20px;
+width : 800px;
+margin : auto;
+background-color : rgba(0,0,0,0.3);
+color : white;
+font-size : 20px;
 }
 
