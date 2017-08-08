@@ -26,3 +26,25 @@ font-size : 20px;
 text-align : center;
 }
 
+p {
+text-align: center;
+}
+
+a:link {
+color: white;
+text-decoration : none;
+}
+
+a:visited {
+color : white;
+text-decoration : none;
+}
+
+a:hover {
+color : #00ffff;
+text-decoration : underline;
+}
+
+a:active {
+color : white;
+}
