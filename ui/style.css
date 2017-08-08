@@ -27,6 +27,7 @@ text-align : center;
 }
 
 p {
+padding-top : 60px;
 text-align: center;
 font-size : 25px;
 }
