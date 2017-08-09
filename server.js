@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 var pages = {
     'about-me' : {
-      bg : url("https://static.pexels.com/photos/159056/dandelion-seeds-number-of-lion-screen-pilot-159056.jpeg"),
+      /*bg : url("https://static.pexels.com/photos/159056/dandelion-seeds-number-of-lion-screen-pilot-159056.jpeg"),*/
       title : 'About Me',
       heading : 'About Me',
       content : `<p>
@@ -19,7 +19,7 @@ var pages = {
                 </p>`
     },
     'movies' : {
-      bg : url("https://static.pexels.com/photos/540518/pexels-photo-540518.jpeg"),
+      /*bg : url("https://static.pexels.com/photos/540518/pexels-photo-540518.jpeg"),*/
       title : 'Movies',
       heading : 'Fav Movies',
       content : `<p>
@@ -27,7 +27,7 @@ var pages = {
                 </p>`
     },
     'fun' : {
-      bg : url("https://static.pexels.com/photos/386148/pexels-photo-386148.jpeg"),
+      /*bg : url("https://static.pexels.com/photos/386148/pexels-photo-386148.jpeg"),*/
       title : 'Fun',
       heading : 'For LOLs',
       content : `<p>
@@ -38,7 +38,7 @@ var pages = {
 
 
 function createTemplate (data) {
-        var bg = data.bg;
+        /*var bg = data.bg;*/
         var title = data.title;
         var heading = data.heading;
         var content = data.content;
@@ -52,7 +52,7 @@ function createTemplate (data) {
                  <link href="/ui/style.css" rel="stylesheet" />
                 <style>
                     body{
-                        background-image : ${bg};
+                        background-image : url("https://static.pexels.com/photos/386148/pexels-photo-386148.jpeg");
                         background-size : cover;
                         background-repeat : no-repeat;
                     }
