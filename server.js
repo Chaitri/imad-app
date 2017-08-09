@@ -57,7 +57,7 @@ function createTemplate (data) {
                         background-repeat : no-repeat;
                     }
                     
-                    h1 {
+                    * {
                         color: black;
                     }
                 </style>
