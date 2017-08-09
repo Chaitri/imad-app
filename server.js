@@ -84,13 +84,6 @@ app.get('/:pageName', function (req,res) {
   res.send(createTemplate(pages[pageName]));
 });
 
-app.get('/movies', function (req,res) {
-   res.sendFile(path.join(__dirname, 'ui', 'movies.html'));
-});
-
-app.get('/fun', function (req,res) {
-   res.sendFile(path.join(__dirname, 'ui', 'fun.html')); 
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
