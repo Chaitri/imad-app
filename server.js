@@ -9,13 +9,30 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var aboutMe = {
-  title : 'About Me',
-  heading : 'About Me',
-  content : `<p>
-                This is content.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet quam. Sed aliquet mollis pretium. Nam turpis risus, molestie a porta vitae, tincidunt ut ex. Donec vitae purus sed massa dapibus commodo. Etiam sed interdum urna. Curabitur nibh diam, interdum sit amet pretium quis, aliquam a velit. Mauris ut ultrices nunc, vel maximus ex. Maecenas porta, ex nec vestibulum tempor, leo lorem rhoncus lorem, at tempor sapien est in metus. Mauris non diam suscipit, eleifend justo nec, faucibus magna.
-            </p>`
+var pages = {
+    'about-me' : {
+      title : 'About Me',
+      heading : 'About Me',
+      content : `<p>
+                    This is content.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet quam. Sed aliquet mollis pretium. Nam turpis risus, molestie a porta vitae, tincidunt ut ex. Donec vitae purus sed massa dapibus commodo. Etiam sed interdum urna. Curabitur nibh diam, interdum sit amet pretium quis, aliquam a velit. Mauris ut ultrices nunc, vel maximus ex. Maecenas porta, ex nec vestibulum tempor, leo lorem rhoncus lorem, at tempor sapien est in metus. Mauris non diam suscipit, eleifend justo nec, faucibus magna.
+                </p>`
+    },
+    'movies' : {
+      title : 'Movies',
+      heading : 'Fav Movies',
+      content : `<p>
+                    This is content.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet quam. Sed aliquet mollis pretium. Nam turpis risus, molestie a porta vitae, tincidunt ut ex. Donec vitae purus sed massa dapibus commodo. Etiam sed interdum urna. Curabitur nibh diam, interdum sit amet pretium quis, aliquam a velit. Mauris ut ultrices nunc, vel maximus ex. Maecenas porta, ex nec vestibulum tempor, leo lorem rhoncus lorem, at tempor sapien est in metus. Mauris non diam suscipit, eleifend justo nec, faucibus magna.
+                </p>`
+    },
+    'fun' : {
+      title : 'Fun',
+      heading : 'For LOLs',
+      content : `<p>
+                    This is content.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non aliquet quam. Sed aliquet mollis pretium. Nam turpis risus, molestie a porta vitae, tincidunt ut ex. Donec vitae purus sed massa dapibus commodo. Etiam sed interdum urna. Curabitur nibh diam, interdum sit amet pretium quis, aliquam a velit. Mauris ut ultrices nunc, vel maximus ex. Maecenas porta, ex nec vestibulum tempor, leo lorem rhoncus lorem, at tempor sapien est in metus. Mauris non diam suscipit, eleifend justo nec, faucibus magna.
+                </p>`
+    }
 };
+
 
 function createTemplate (data) {
         var title = data.title;
@@ -58,8 +75,9 @@ function createTemplate (data) {
          return htmlTemplate; 
 }
 
-app.get('/about-me', function (req,res) {
-  res.send(createTemplate(aboutMe));
+app.get('/:pageName', function (req,res) {
+  var pageName = req.params.pageName ;
+  res.send(createTemplate(pages[pageName]));
 });
 
 app.get('/movies', function (req,res) {
