@@ -58,7 +58,7 @@ function createTemplate (data) {
                     }
                     
                     * {
-                        color: black;
+                        color: white;
                     }
                 </style>
             </head>
